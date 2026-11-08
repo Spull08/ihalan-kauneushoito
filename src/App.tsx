@@ -221,9 +221,12 @@ export default function App() {
     <>
       <header className="header">
         <a href="#" className="logo">
-          <span className="logo-name">Ihalan</span>
-          <span className="logo-sub">KAUNEUSHOITO</span>
-        </a>
+  <img
+    src="/logo.png"
+    alt="Ihalan Kauneushoitola"
+    className="logo-image"
+  />
+</a>
 
         <nav>
           {t.nav.map((item, index) => (
