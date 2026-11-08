@@ -641,3 +641,55 @@ footer small {
     width: 125px;
   }
 }
+
+/* Compact logo and mobile header */
+.header .logo {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.header .logo-image {
+  width: 88px;
+  max-width: 88px;
+  height: auto;
+  max-height: 88px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 12px 5%;
+  }
+
+  .header .logo {
+    justify-self: start;
+  }
+
+  .header .logo-image {
+    width: 64px;
+    max-width: 64px;
+    max-height: 64px;
+  }
+
+  .header .language-switch {
+    justify-self: end;
+  }
+
+  .header nav {
+    grid-column: 1 / -1;
+    order: initial;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .header nav a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
